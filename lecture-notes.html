@@ -3,14 +3,15 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.7">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PH31207 | Classical Mechanics</title>
+<title>Lecture Notes | PH31207 Classical Mechanics</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 
 <style>
 
@@ -24,28 +25,11 @@ html{
     scroll-behavior:smooth;
 }
 
-
 body{
-
     font-family:"Inter",sans-serif;
-
-    font-size:20px;
-
-    font-weight:400;
-
-    line-height:1.9;
-    
+    background:#f8f8f6;
     color:#333;
     line-height:1.8;
-
-}
-
-p,li,td,th{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:1.25rem;
-
 }
 
 /* Navigation */
@@ -151,13 +135,13 @@ header p{
 
 main{
 
-	width:90%;
+    width:90%;
 
-    max-width:1500px;
+    max-width:1200px;
 
-    margin:0 auto;
+    margin:auto;
 
-    padding:60px 0;
+    padding:70px 0;
 }
 
 /* Cards */
@@ -166,11 +150,10 @@ main{
 
     display:grid;
 
-    grid-template-columns:repeat(4,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
     gap:30px;
 }
-
 
 .card{
 
@@ -206,6 +189,18 @@ main{
 .card p{
 
     color:#666;
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1500px;
+
+    margin:0 auto;
+
+    padding:60px 0;
+
 }
 
 .button{
@@ -291,31 +286,17 @@ footer h3{
     font-size:2rem;
 }
 
-th{
-    text-align:left;
-}
-
-h1,h2,h3,h4{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-weight:600;
-
-}
-
 </style>
 
-<link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
 <nav>
+    <ul>
 
-<ul>
-
-<li><a href="#">Home</a></li>
+<li><a href="index.html">Home</a></li>
 
 <li><a href="syllabus.html">Syllabus</a></li>
 
@@ -333,150 +314,190 @@ h1,h2,h3,h4{
 
 <li><a href="contact.html">Contact</a></li>
 
-</ul>
-
+    </ul>
 </nav>
 
 <header>
 
-<h1>PH31207</h1>
+    <h1>Lecture Notes</h1>
 
-<h2>Classical Mechanics</h2>
+    <h2>PH31207 — Classical Mechanics</h2>
 
-<p>
-Department of Physics<br>
-Indian Institute of Technology Kharagpur
-</p>
-
-<div class="hero">
-⚙️
-</div>
+    <p>
+        Department of Physics<br>
+        Indian Institute of Technology Kharagpur
+    </p>
 
 </header>
 
-<main>
+<div class="container">
 
 <section>
 
-<h2>Course Overview</h2>
+<h2 class="section-title">Course Notes</h2>
 
 <p>
 
-This course develops the principles of classical mechanics from Newtonian
-mechanics to the Lagrangian and Hamiltonian formulations. Topics include
-oscillations, central force motion, rigid body dynamics, variational
-principles, and canonical transformations.
+Lecture slides, handwritten notes and supplementary material will be uploaded
+throughout the semester.
 
 </p>
 
 </section>
 
 <section>
-
-<h2>Course Resources</h2>
 
 <div class="grid">
 
 <div class="card">
 
-<h3>Syllabus</h3>
+<h3>Lecture 1</h3>
 
-<p>Detailed syllabus and grading policy.</p>
+<p>
+Introduction to Classical Mechanics
+</p>
 
-<a class="button" href="syllabus.html">Open</a>
-
-</div>
-
-<div class="card">
-
-<h3>Lecture Notes</h3>
-
-<p>Slides and lecture notes.</p>
-
-<a class="button" href="lecture-notes.html">Open</a>
+<a class="button"
+href="lecture-notes/lecture01.pdf">
+Download PDF
+</a>
 
 </div>
 
 <div class="card">
 
-<h3>Tutorials</h3>
+<h3>Lecture 2</h3>
 
-<p>Weekly tutorial sheets.</p>
+<p>
+Newton's Laws of Motion
+</p>
 
-<a class="button" href="tutorials.html">Open</a>
-
-</div>
-
-<div class="card">
-
-<h3>Assignments</h3>
-
-<p>Assignments and submission details.</p>
-
-<a class="button" href="assignments.html">Open</a>
+<a class="button"
+href="lecture-notes/lecture02.pdf">
+Download PDF
+</a>
 
 </div>
 
 <div class="card">
 
-<h3>Question Papers</h3>
+<h3>Lecture 3</h3>
 
-<p>Previous Mid-semester and End-semester examinations.</p>
+<p>
+Oscillatory Motion
+</p>
 
-<a class="button" href="question-papers.html">Open</a>
-
-</div>
-
-<div class="card">
-
-<h3>References</h3>
-
-<p>Textbooks and additional reading material.</p>
-
-<a class="button" href="references.html">Open</a>
+<a class="button"
+href="lecture-notes/lecture03.pdf">
+Download PDF
+</a>
 
 </div>
 
 <div class="card">
 
+<h3>Lecture 4</h3>
 
+<p>
+Coupled Oscillations
+</p>
 
-<h3>Downloads</h3>
-
-
-
-<p>Formula sheets, constants, course documents, and other resources.</p>
-
-
-
-<a class="button" href="downloads.html">Open</a>
-
-
+<a class="button"
+href="lecture-notes/lecture04.pdf">
+Download PDF
+</a>
 
 </div>
-
-
-
-
 
 <div class="card">
 
+<h3>Lecture 5</h3>
 
+<p>
+Calculus of Variations
+</p>
 
-<h3>Contact</h3>
-
-
-
-<p>Instructor, teaching assistants, office hours, and course information.</p>
-
-
-
-<a class="button" href="contact.html">Open</a>
-
-
+<a class="button"
+href="lecture-notes/lecture05.pdf">
+Download PDF
+</a>
 
 </div>
 
+<div class="card">
+
+<h3>Lecture 6</h3>
+
+<p>
+Lagrangian Mechanics
+</p>
+
+<a class="button"
+href="lecture-notes/lecture06.pdf">
+Download PDF
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Lecture 7</h3>
+
+<p>
+Central Force Motion
+</p>
+
+<a class="button"
+href="lecture-notes/lecture07.pdf">
+Download PDF
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Lecture 8</h3>
+
+<p>
+Rigid Body Dynamics
+</p>
+
+<a class="button"
+href="lecture-notes/lecture08.pdf">
+Download PDF
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Lecture 9</h3>
+
+<p>
+Hamiltonian Mechanics
+</p>
+
+<a class="button"
+href="lecture-notes/lecture09.pdf">
+Download PDF
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Lecture 10</h3>
+
+<p>
+Canonical Transformations
+</p>
+
+<a class="button"
+href="lecture-notes/lecture10.pdf">
+Download PDF
+</a>
+
+</div>
 
 </div>
 
@@ -484,36 +505,37 @@ principles, and canonical transformations.
 
 <section>
 
-<h2>Announcements</h2>
-
-<div class="notice">
-
-<strong>Welcome!</strong>
+<h2 class="section-title">Additional Reading</h2>
 
 <p>
 
-Course materials will be uploaded throughout the semester.
-Please check this page regularly for announcements.
+Additional lecture notes and supplementary reading material may be uploaded as
+the course progresses.
 
 </p>
 
-</div>
-
 </section>
 
-</main>
+</div>
 
 <footer>
 
-<h3>PH31207 &mdash; Classical Mechanics</h3>
+<h2>PH31207 — Classical Mechanics</h2>
+
+<p>
 
 Department of Physics<br>
-
 Indian Institute of Technology Kharagpur
 
-<br><br>
+</p>
+
+<br>
+
+<p>
 
 © 2026
+
+</p>
 
 </footer>
 
