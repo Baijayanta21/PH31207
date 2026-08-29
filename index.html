@@ -102,7 +102,7 @@ header{
 }
 
 
-.nav a{
+.nav button{
   border:0;
   background:none;
   color:var(--muted);
@@ -115,7 +115,7 @@ header{
   text-decoration:none;
 }
   
-.nav a:after{
+.nav button:after{
   content:"";
   position:absolute;
   left:0;right:100%;
@@ -124,9 +124,9 @@ header{
   background:var(--gold);
   transition:.5s
 }
-.nav a.active{color:var(--ink);}
+.nav button.active{color:var(--ink);}
 
-.nav a:hover::after, .nav a.active::after{right:0}
+.nav button:hover::after, .nav button.active::after{right:0}
 
 
   
@@ -672,25 +672,23 @@ header{
 <body>
 
 
+
+
 <!-- HEADER -->
 <header>
 <div class="container header">
 
-
 <nav class="nav" aria-label="Main navigation">
 
-  <a href="/index.html" data-page="home" class="active">Home</a>
-  <a href="/course-description" data-page="cd">Course Description</a>
-  <a href="/tutorials" data-page="tut">Tutorials</a>
-  <a href="/assignments" data-page="ass">Assignments</a>
-  <a href="/question-papers" data-page="qp">Question Papers</a>
-  <a href="/references" data-page="ref">References</a>
-  <a href="/contact" data-page="contact">Contact</a>
+<button type="button" data-page="home" class="active">Home</button>
+<button type="button" data-page="cd">Course Description</button>
+<button type="button" data-page="tut">Tutorials</button>
+<button type="button" data-page="ass">Assignments</button>
+<button type="button" data-page="qp">Question Papers</button>
+<button type="button" data-page="ref">References</button>
+<button type="button" data-page="contact">Contact</button>
 
 </nav>
-
-
-  
 
 </div>
 </header>
@@ -1544,27 +1542,13 @@ please refer to the homepage regularly.
   </p>
 </footer>
 
-
-
-
-
+<!-- JAVASCRIPT -->
 <script>
-  const navLinks = document.querySelectorAll(".nav a");
+  const navButtons = document.querySelectorAll(".nav button");
   const pageLinks = document.querySelectorAll(".box-item [data-page]");
   const pages = document.querySelectorAll(".page");
 
-  // Map page IDs to URLs
-  const routes = {
-    home: "/PH31207/home",
-    cd: "/PH31207/course-description",
-    tut: "/PH31207/tutorials",
-    ass: "/PH31207/assignments",
-    qp: "/PH31207/question-papers",
-    ref: "/PH31207/references",
-    contact: "/PH31207/contact"
-  };
-
-  function showPage(pageId, updateURL = true) {
+  function showPage(pageId) {
 
     // Hide all pages
     pages.forEach(page => {
@@ -1578,119 +1562,35 @@ please refer to the homepage regularly.
       selectedPage.classList.add("active");
     }
 
-    // Update active navigation link
-    navLinks.forEach(link => {
-      link.classList.remove("active");
+    // Update active navigation button
+    navButtons.forEach(button => {
+      button.classList.remove("active");
 
-      if (link.dataset.page === pageId) {
-        link.classList.add("active");
+      if (button.dataset.page === pageId) {
+        button.classList.add("active");
       }
     });
 
-    // Change URL without reloading the page
-    if (updateURL && routes[pageId]) {
-      history.pushState(
-        { page: pageId },
-        "",
-        routes[pageId]
-      );
-    }
-
-    // Scroll to top
+    // Scroll to the top
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   }
 
-
-  // Navigation links
-  navLinks.forEach(link => {
-
-    link.addEventListener("click", event => {
-
-      event.preventDefault();
-
-      showPage(link.dataset.page);
-
+  // Navigation buttons
+  navButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      showPage(button.dataset.page);
     });
-
   });
 
-
-  // Links inside boxes
+  // Open links inside boxes
   pageLinks.forEach(link => {
-
     link.addEventListener("click", event => {
-
       event.preventDefault();
-
       showPage(link.dataset.page);
-
     });
-
-  });
-
-
-  // Handle browser Back / Forward buttons
-  window.addEventListener("popstate", event => {
-
-    const path = window.location.pathname;
-
-    let pageId = "home";
-
-    if (path === "/course-description") {
-      pageId = "cd";
-    }
-    else if (path === "/tutorials") {
-      pageId = "tut";
-    }
-    else if (path === "/assignments") {
-      pageId = "ass";
-    }
-    else if (path === "/question-papers") {
-      pageId = "qp";
-    }
-    else if (path === "/references") {
-      pageId = "ref";
-    }
-    else if (path === "/contact") {
-      pageId = "contact";
-    }
-
-    showPage(pageId, false);
-
-  });
-
-
-  // Open correct section when the page is loaded
-  window.addEventListener("DOMContentLoaded", () => {
-
-    const path = window.location.pathname;
-
-    let pageId = "home";
-
-    if (path === "/course-description") {
-      pageId = "cd";
-    }
-    else if (path === "/tutorials") {
-      pageId = "tut";
-    }
-    else if (path === "/assignments") {
-      pageId = "ass";
-    }
-    else if (path === "/question-papers") {
-      pageId = "qp";
-    }
-    else if (path === "/references") {
-      pageId = "ref";
-    }
-    else if (path === "/contact") {
-      pageId = "contact";
-    }
-
-    showPage(pageId, false);
-
   });
 </script>
 
